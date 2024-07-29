@@ -15,3 +15,7 @@ def apply_stop_loss_take_profit(df, stop_loss_pct, take_profit_pct):
     return df
 
 if __name__ == "__main__":
+    df = pd.read_csv('AAPL_data.csv')
+    df = calculate_signals(df)
+    df = apply_stop_loss_take_profit(df, 0.10, 0.30)
+    print(df.head())
