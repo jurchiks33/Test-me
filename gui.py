@@ -25,4 +25,12 @@ class TradingApp:
         self.start_button = tk.Button(root, text="Start", command=self.start)
         self.start_button.grid(row=2, column=1)
 
-    
+    def start(self):
+        ticker = self.ticker_entry.get()
+        strategy = self.strategy_combobox.get()
+
+        # Data fetching
+        df = fetch_stock_data(ticker, '2022-01-01', '2023-01-01')
+        df = calculate_signals(df)
+        df = apply_stop_loss_take_profit(df, 0.10, 0.30)
+        
