@@ -12,3 +12,7 @@ def optimize_strategy(df):
         'max_depth': [5, 10]
     }
     
+    grid_search = GridSearchCV(model, param_grid, cv=5)
+    grid_search.fit(x, y)
+    return grid_search.best_params_
+
