@@ -33,4 +33,10 @@ class TradingApp:
         df = fetch_stock_data(ticker, '2022-01-01', '2023-01-01')
         df = calculate_signals(df)
         df = apply_stop_loss_take_profit(df, 0.10, 0.30)
-        
+
+        # Backtesting and optimization.
+        final_balance = backtest(df)
+        best_params = optimize_strategy(df)
+
+        print(f"Final Balance: ${final_balance}")
+        print(f"Best parameters: {best_params}")
