@@ -40,3 +40,8 @@ class TradingApp:
 
         print(f"Final Balance: ${final_balance}")
         print(f"Best parameters: {best_params}")
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = TradingApp(root)
+    root.mainloop()
