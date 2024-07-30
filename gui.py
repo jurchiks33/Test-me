@@ -21,4 +21,8 @@ class TradingApp:
         self.strategy_combobox = ttk.Combobox(root, values=["Strategy 1", "Strategy 2"])
         self.strategy_combobox.grid(row=1, column=1)
 
-        
+        # Start Button
+        self.start_button = tk.Button(root, text="Start", command=self.start)
+        self.start_button.grid(row=2, column=1)
+
+    
