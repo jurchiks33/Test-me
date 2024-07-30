@@ -17,3 +17,8 @@ class TradingApp:
         self.ticker_entry.grid(row=0, column=1)
 
         # Strategy Selection
+        tk.Label(root, text="Strategy").grid(row=1, column=0)
+        self.strategy_combobox = ttk.Combobox(root, values=["Strategy 1", "Strategy 2"])
+        self.strategy_combobox.grid(row=1, column=1)
+
+        
