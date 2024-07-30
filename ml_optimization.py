@@ -16,3 +16,7 @@ def optimize_strategy(df):
     grid_search.fit(x, y)
     return grid_search.best_params_
 
+if __name__ == "__main":
+    df = pd.read_csv('AAPL_data_with_signals.csv')
+    best_params = optimize_strategy(df)
+    print(best_params)
