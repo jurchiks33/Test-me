@@ -13,4 +13,7 @@ class TradingApp:
 
         # Ticker input
         tk.Label(root, text="Ticker"). grid(row=0, column=0)
-        
+        self.ticker_entry = tk.Entry(root)
+        self.ticker_entry.grid(row=0, column=1)
+
+        # Strategy Selection
